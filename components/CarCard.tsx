@@ -11,7 +11,7 @@ interface CarCardProps {
   car: CarProps;
 }
 
-const carCard = ({ car }: CarCardProps) => {
+const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
   const carRent = calculateCarRent(city_mpg, year);
   const [isOpen, setIsOpen] = useState(false);
@@ -61,4 +61,4 @@ const carCard = ({ car }: CarCardProps) => {
   );
 };
 
-export default carCard;
+export default CarCard;
