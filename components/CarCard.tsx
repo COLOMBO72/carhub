@@ -1,6 +1,7 @@
 'use client';
 import { CarProps } from '@/types';
 import Image from 'next/image';
+import { useState } from 'react';
 import React from 'react';
 import CustomButton from './CustomButton';
 import { calculateCarRent, getCarImage } from '@/utils';
@@ -13,7 +14,7 @@ interface CarCardProps {
 const carCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
   const carRent = calculateCarRent(city_mpg, year);
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="car-card group">
       <div className="car-card__content">
